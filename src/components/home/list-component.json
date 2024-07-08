@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_list_components",
+  "info": {
+    "displayName": "list_component",
+    "icon": "emotionUnhappy"
+  },
+  "options": {},
+  "attributes": {
+    "list_title": {
+      "type": "string"
+    },
+    "list_description": {
+      "type": "text"
+    },
+    "list_item": {
+      "displayName": "list_item",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.list-item",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_home_sections",
+  "info": {
+    "displayName": "Section",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "section_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "section_title": {
+      "type": "string",
+      "required": true
+    },
+    "section_description": {
+      "type": "text"
+    },
+    "section_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.list-item",
+      "required": true,
+      "min": 1
+    }
+  }
+}
