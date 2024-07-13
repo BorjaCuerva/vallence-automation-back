@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface HomeFaqComponent extends Schema.Component {
+  collectionName: 'components_home_faq_components';
+  info: {
+    displayName: 'FAQ_component';
+    icon: 'discuss';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    faq_item: Attribute.Component<'home.list-item', true>;
+  };
+}
+
 export interface HomeHeroComponent extends Schema.Component {
   collectionName: 'components_home_hero_components';
   info: {
@@ -33,11 +46,12 @@ export interface HomeListItem extends Schema.Component {
   info: {
     displayName: 'list_item';
     icon: 'archive';
+    description: '';
   };
   attributes: {
-    item_icon: Attribute.Media<'images'> & Attribute.Required;
     item_title: Attribute.String & Attribute.Required;
-    item_description: Attribute.Text & Attribute.Required;
+    item_description: Attribute.Text;
+    item_image: Attribute.Media<'images'>;
   };
 }
 
@@ -75,14 +89,43 @@ export interface HomeSection extends Schema.Component {
   };
 }
 
+export interface HomeStepsComponent extends Schema.Component {
+  collectionName: 'components_home_steps_components';
+  info: {
+    displayName: 'steps_component';
+    icon: 'stack';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images'>;
+    step_item: Attribute.Component<'home.list-item', true>;
+  };
+}
+
+export interface HomeWidgetComponent extends Schema.Component {
+  collectionName: 'components_home_widget_components';
+  info: {
+    displayName: 'widget_component';
+    icon: 'dashboard';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    widget_item: Attribute.Component<'home.list-item', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'home.faq-component': HomeFaqComponent;
       'home.hero-component': HomeHeroComponent;
       'home.list-component': HomeListComponent;
       'home.list-item': HomeListItem;
       'home.repeatable-component': HomeRepeatableComponent;
       'home.section': HomeSection;
+      'home.steps-component': HomeStepsComponent;
+      'home.widget-component': HomeWidgetComponent;
     }
   }
 }

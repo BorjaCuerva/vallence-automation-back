@@ -398,6 +398,24 @@ export interface ApiHomeHome extends Schema.SingleType {
           localized: true;
         };
       }>;
+    steps_component: Attribute.Component<'home.steps-component'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    widget_component: Attribute.Component<'home.widget-component'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    faq_component: Attribute.Component<'home.faq-component'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
