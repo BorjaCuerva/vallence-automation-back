@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_home_steps_components",
+  "info": {
+    "displayName": "steps_component",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "step_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.list-item"
+    }
+  }
+}

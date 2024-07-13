@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_widget_components",
+  "info": {
+    "displayName": "widget_component",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "widget_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.list-item"
+    }
+  }
+}

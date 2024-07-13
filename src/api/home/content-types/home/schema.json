@@ -50,6 +50,39 @@
       },
       "component": "home.repeatable-component",
       "required": false
+    },
+    "steps_component": {
+      "displayName": "steps_component",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.steps-component"
+    },
+    "widget_component": {
+      "displayName": "widget_component",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.widget-component"
+    },
+    "faq_component": {
+      "displayName": "FAQ_component",
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.faq-component"
     }
   }
 }
